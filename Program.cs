@@ -16,7 +16,7 @@ namespace SchoolMgtSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Grades myObj = new Grades();
+            StudentApplicationForm myObj = new StudentApplicationForm();
             Application.Run(myObj);
         }
     }
