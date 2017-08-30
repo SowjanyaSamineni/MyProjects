@@ -25,24 +25,27 @@ namespace SchoolMgtSystem
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("inserted successfully");
+            getGradesData();
+
         }
 
         private void Grades_Load(object sender, EventArgs e)
         {
-            showGradesData();
+            DataTable datatable1;
+            datatable1 = getGradesData();
+            dataGridView1.DataSource = datatable1;
         }
 
-        private void showGradesData()
+        public DataTable getGradesData()
         {
             con.Open();
             SqlCommand cmd = new SqlCommand("select * from GRADES", con);
-            //cmd.ExecuteReader();
             SqlDataReader dr;
             dr = cmd.ExecuteReader();
             DataTable datatable = new DataTable();
             datatable.Load(dr);
-            dataGridView1.DataSource = datatable;
             con.Close();
+            return datatable;
         }
     }
 }

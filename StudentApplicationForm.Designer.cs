@@ -47,8 +47,7 @@
             this.txtGphone = new System.Windows.Forms.TextBox();
             this.rdbMale = new System.Windows.Forms.RadioButton();
             this.rdbFemale = new System.Windows.Forms.RadioButton();
-            this.txtDOJ = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.BirthDate = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -56,16 +55,15 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.txtPreTCno = new System.Windows.Forms.TextBox();
-            this.txtPreGradeId = new System.Windows.Forms.TextBox();
             this.txtPreInstitute = new System.Windows.Forms.TextBox();
             this.txtPreAcdamicYear = new System.Windows.Forms.TextBox();
-            this.txtAdmissionGrade = new System.Windows.Forms.TextBox();
-            this.lblgradeid = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.txtAcadamicYear = new System.Windows.Forms.TextBox();
             this.btnsubmit = new System.Windows.Forms.Button();
             this.txtAdmissionno = new System.Windows.Forms.TextBox();
-            this.txtGradeid = new System.Windows.Forms.TextBox();
+            this.cmbpregid = new System.Windows.Forms.ComboBox();
+            this.cmdgradeadmission = new System.Windows.Forms.ComboBox();
+            this.DateOfJoining = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -230,19 +228,14 @@
             this.rdbFemale.Text = "Female";
             this.rdbFemale.UseVisualStyleBackColor = true;
             // 
-            // txtDOJ
+            // BirthDate
             // 
-            this.txtDOJ.Location = new System.Drawing.Point(529, 36);
-            this.txtDOJ.Name = "txtDOJ";
-            this.txtDOJ.Size = new System.Drawing.Size(121, 20);
-            this.txtDOJ.TabIndex = 19;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(123, 121);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker1.TabIndex = 20;
+            this.BirthDate.CustomFormat = "dd-MM-yyyy";
+            this.BirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.BirthDate.Location = new System.Drawing.Point(123, 121);
+            this.BirthDate.Name = "BirthDate";
+            this.BirthDate.Size = new System.Drawing.Size(100, 20);
+            this.BirthDate.TabIndex = 20;
             // 
             // label11
             // 
@@ -265,16 +258,16 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(362, 130);
+            this.label13.Location = new System.Drawing.Point(362, 139);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 13);
+            this.label13.Size = new System.Drawing.Size(80, 13);
             this.label13.TabIndex = 24;
-            this.label13.Text = "Previous GradeId";
+            this.label13.Text = "Previous Grade";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(364, 163);
+            this.label14.Location = new System.Drawing.Point(362, 170);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(88, 13);
             this.label14.TabIndex = 25;
@@ -283,7 +276,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(362, 195);
+            this.label15.Location = new System.Drawing.Point(364, 223);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(123, 13);
             this.label15.TabIndex = 26;
@@ -292,7 +285,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(359, 238);
+            this.label16.Location = new System.Drawing.Point(362, 268);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(98, 13);
             this.label16.TabIndex = 27;
@@ -305,42 +298,19 @@
             this.txtPreTCno.Size = new System.Drawing.Size(121, 20);
             this.txtPreTCno.TabIndex = 28;
             // 
-            // txtPreGradeId
-            // 
-            this.txtPreGradeId.Location = new System.Drawing.Point(529, 130);
-            this.txtPreGradeId.Name = "txtPreGradeId";
-            this.txtPreGradeId.Size = new System.Drawing.Size(121, 20);
-            this.txtPreGradeId.TabIndex = 29;
-            // 
             // txtPreInstitute
             // 
-            this.txtPreInstitute.Location = new System.Drawing.Point(529, 163);
+            this.txtPreInstitute.Location = new System.Drawing.Point(529, 170);
             this.txtPreInstitute.Name = "txtPreInstitute";
             this.txtPreInstitute.Size = new System.Drawing.Size(121, 20);
             this.txtPreInstitute.TabIndex = 30;
             // 
             // txtPreAcdamicYear
             // 
-            this.txtPreAcdamicYear.Location = new System.Drawing.Point(529, 195);
+            this.txtPreAcdamicYear.Location = new System.Drawing.Point(529, 223);
             this.txtPreAcdamicYear.Name = "txtPreAcdamicYear";
             this.txtPreAcdamicYear.Size = new System.Drawing.Size(121, 20);
             this.txtPreAcdamicYear.TabIndex = 31;
-            // 
-            // txtAdmissionGrade
-            // 
-            this.txtAdmissionGrade.Location = new System.Drawing.Point(529, 234);
-            this.txtAdmissionGrade.Name = "txtAdmissionGrade";
-            this.txtAdmissionGrade.Size = new System.Drawing.Size(121, 20);
-            this.txtAdmissionGrade.TabIndex = 32;
-            // 
-            // lblgradeid
-            // 
-            this.lblgradeid.AutoSize = true;
-            this.lblgradeid.Location = new System.Drawing.Point(367, 275);
-            this.lblgradeid.Name = "lblgradeid";
-            this.lblgradeid.Size = new System.Drawing.Size(48, 13);
-            this.lblgradeid.TabIndex = 33;
-            this.lblgradeid.Text = "Grade Id";
             // 
             // label18
             // 
@@ -375,29 +345,46 @@
             this.txtAdmissionno.Size = new System.Drawing.Size(121, 20);
             this.txtAdmissionno.TabIndex = 38;
             // 
-            // txtGradeid
+            // cmbpregid
             // 
-            this.txtGradeid.Location = new System.Drawing.Point(529, 272);
-            this.txtGradeid.Name = "txtGradeid";
-            this.txtGradeid.Size = new System.Drawing.Size(121, 20);
-            this.txtGradeid.TabIndex = 35;
-            this.txtGradeid.TextChanged += new System.EventHandler(this.txtGradeid_TextChanged);
+            this.cmbpregid.FormattingEnabled = true;
+            this.cmbpregid.Location = new System.Drawing.Point(529, 136);
+            this.cmbpregid.Name = "cmbpregid";
+            this.cmbpregid.Size = new System.Drawing.Size(121, 21);
+            this.cmbpregid.TabIndex = 39;
+            this.cmbpregid.SelectedIndexChanged += new System.EventHandler(this.cmbpregid_SelectedIndexChanged);
+            // 
+            // cmdgradeadmission
+            // 
+            this.cmdgradeadmission.FormattingEnabled = true;
+            this.cmdgradeadmission.Location = new System.Drawing.Point(529, 268);
+            this.cmdgradeadmission.Name = "cmdgradeadmission";
+            this.cmdgradeadmission.Size = new System.Drawing.Size(121, 21);
+            this.cmdgradeadmission.TabIndex = 40;
+            // 
+            // DateOfJoining
+            // 
+            this.DateOfJoining.CustomFormat = "dd-MM-yyyy";
+            this.DateOfJoining.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DateOfJoining.Location = new System.Drawing.Point(529, 34);
+            this.DateOfJoining.Name = "DateOfJoining";
+            this.DateOfJoining.Size = new System.Drawing.Size(100, 20);
+            this.DateOfJoining.TabIndex = 41;
             // 
             // StudentApplicationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1222, 509);
+            this.Controls.Add(this.DateOfJoining);
+            this.Controls.Add(this.cmdgradeadmission);
+            this.Controls.Add(this.cmbpregid);
             this.Controls.Add(this.txtAdmissionno);
             this.Controls.Add(this.btnsubmit);
             this.Controls.Add(this.txtAcadamicYear);
-            this.Controls.Add(this.txtGradeid);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.lblgradeid);
-            this.Controls.Add(this.txtAdmissionGrade);
             this.Controls.Add(this.txtPreAcdamicYear);
             this.Controls.Add(this.txtPreInstitute);
-            this.Controls.Add(this.txtPreGradeId);
             this.Controls.Add(this.txtPreTCno);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -405,8 +392,7 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.txtDOJ);
+            this.Controls.Add(this.BirthDate);
             this.Controls.Add(this.rdbFemale);
             this.Controls.Add(this.rdbMale);
             this.Controls.Add(this.txtGphone);
@@ -428,6 +414,7 @@
             this.Controls.Add(this.label1);
             this.Name = "StudentApplicationForm";
             this.Text = "StudentApplicationForm";
+            this.Load += new System.EventHandler(this.StudentApplicationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -454,8 +441,7 @@
         private System.Windows.Forms.TextBox txtGphone;
         private System.Windows.Forms.RadioButton rdbMale;
         private System.Windows.Forms.RadioButton rdbFemale;
-        private System.Windows.Forms.TextBox txtDOJ;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker BirthDate;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
@@ -463,15 +449,14 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox txtPreTCno;
-        private System.Windows.Forms.TextBox txtPreGradeId;
         private System.Windows.Forms.TextBox txtPreInstitute;
         private System.Windows.Forms.TextBox txtPreAcdamicYear;
-        private System.Windows.Forms.TextBox txtAdmissionGrade;
-        private System.Windows.Forms.Label lblgradeid;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox txtAcadamicYear;
         private System.Windows.Forms.Button btnsubmit;
         private System.Windows.Forms.TextBox txtAdmissionno;
-        private System.Windows.Forms.TextBox txtGradeid;
+        private System.Windows.Forms.ComboBox cmbpregid;
+        private System.Windows.Forms.ComboBox cmdgradeadmission;
+        private System.Windows.Forms.DateTimePicker DateOfJoining;
     }
 }

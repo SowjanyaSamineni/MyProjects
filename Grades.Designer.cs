@@ -49,7 +49,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(383, 91);
+            this.label2.Location = new System.Drawing.Point(616, 47);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 13);
             this.label2.TabIndex = 1;
@@ -64,14 +64,14 @@
             // 
             // txtGname
             // 
-            this.txtGname.Location = new System.Drawing.Point(464, 88);
+            this.txtGname.Location = new System.Drawing.Point(701, 44);
             this.txtGname.Name = "txtGname";
             this.txtGname.Size = new System.Drawing.Size(100, 20);
             this.txtGname.TabIndex = 3;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(464, 124);
+            this.btnAdd.Location = new System.Drawing.Point(838, 42);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(75, 23);
             this.btnAdd.TabIndex = 4;
