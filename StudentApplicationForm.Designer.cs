@@ -267,7 +267,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(362, 170);
+            this.label14.Location = new System.Drawing.Point(362, 177);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(88, 13);
             this.label14.TabIndex = 25;
@@ -347,12 +347,12 @@
             // 
             // cmbpregid
             // 
+            this.cmbpregid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbpregid.FormattingEnabled = true;
             this.cmbpregid.Location = new System.Drawing.Point(529, 136);
             this.cmbpregid.Name = "cmbpregid";
             this.cmbpregid.Size = new System.Drawing.Size(121, 21);
             this.cmbpregid.TabIndex = 39;
-            this.cmbpregid.SelectedIndexChanged += new System.EventHandler(this.cmbpregid_SelectedIndexChanged);
             // 
             // cmdgradeadmission
             // 

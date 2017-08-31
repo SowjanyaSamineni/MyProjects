@@ -30,29 +30,29 @@ namespace SchoolMgtSystem
             datatable.Load(dr);
             int studentid;
             studentid = Convert.ToInt32(datatable.Rows[0][0]);
-            MessageBox.Show("inserted one record successfully");
-            SqlCommand cmd2 = new SqlCommand("insert into ADMISSIONS(Admission_no,Student_Id,Admission_GradeId)values('" + txtAdmissionno.Text + "','" + studentid + "','" + cmbpregid + "')", con);
+           // MessageBox.Show("inserted one record successfully");
+            SqlCommand cmd2 = new SqlCommand("insert into ADMISSIONS(Admission_no,Student_Id,Admission_GradeId)values('" + txtAdmissionno.Text + "','" + studentid + "','" + cmbpregid.Text + "')", con);
             cmd2.ExecuteNonQuery();
             con.Close();
         }
         private void StudentApplicationForm_Load(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("select  ID,CODE from GRADES", con);
-            SqlDataReader dr = cmd.ExecuteReader();
-            DataTable dt = new DataTable();
-            dt.Load(dr);
-            cmbpregid.DataSource = dt;
+            SqlCommand cmd1 = new SqlCommand("select  ID,CODE from GRADES", con);
+           // SqlCommand cmd2 = new SqlCommand("select  ID,CODE from GRADES", con);
+            SqlDataReader dr= cmd1.ExecuteReader();
+            DataTable dt1 = new DataTable();
+            dt1.Load(dr);
+            //DataTable dt2 = new DataTable();
+            //dt2.Load(dr);
+            cmbpregid.DataSource = dt1;
             cmbpregid.DisplayMember = "CODE";
             cmbpregid.ValueMember = "ID";
-            cmdgradeadmission.DataSource = dt;
+            DataTable dt2 = dt1.Copy();
+            cmdgradeadmission.DataSource = dt2;
             cmdgradeadmission.DisplayMember = "CODE";
             cmdgradeadmission.ValueMember = "ID";
-        }
-
-        private void cmbpregid_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            con.Close();
         }
     }
 }
