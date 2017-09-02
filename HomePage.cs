@@ -28,5 +28,10 @@ namespace SchoolMgtSystem
             stapp.Show();
 
         }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -26,23 +26,26 @@ namespace SchoolMgtSystem
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("one record inserted");
+            getCategoryData();
         }
 
-        private void getCategoryData()
+        private DataTable getCategoryData()
         {
              con.Open();
              SqlCommand cmd= new SqlCommand("select * from  Category",con);
              SqlDataReader dr;
              dr=cmd.ExecuteReader();
-             DataTable datatable = new DataTable();
-             datatable.Load(dr);
+             DataTable dt1 = new DataTable();
+             dt1.Load(dr);
              con.Close();
-             dataGridView1.DataSource = datatable;
+             return dt1;
         }
 
         private void Category1_Load(object sender, EventArgs e)
         {
-            getCategoryData();
+            DataTable dt1;
+            dt1 = getCategoryData();
+            dataGridView1.DataSource = dt1;
         
         }
     }

@@ -17,11 +17,11 @@ namespace SchoolMgtSystem
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("uid=sa;password=surya;database=SCHOOLMANAGEMENTSYSTEM");
+        SqlConnection con = new SqlConnection("uid=sa;password=surya;database=SCHOOLAPPLICATION");
         private void btnAdd_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("insert into GRADES(CODE,NAME)VALUES('" + txtGcode.Text + "','" + txtGname.Text + "')", con);
+            SqlCommand cmd = new SqlCommand("insert into GRADES(CODE,DESCRIPTION)VALUES('" + txtGcode.Text + "','" + txtGname.Text + "')", con);
             cmd.ExecuteNonQuery();
             con.Close();
             MessageBox.Show("inserted successfully");
@@ -47,5 +47,7 @@ namespace SchoolMgtSystem
             con.Close();
             return datatable;
         }
+
+      
     }
 }
