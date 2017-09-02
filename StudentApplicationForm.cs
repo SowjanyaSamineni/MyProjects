@@ -44,6 +44,8 @@ namespace SchoolMgtSystem
         //    con.Open();
         //    SqlCommand cmd = new SqlCommand("Insert into STUDENT_TABLE values ('" + txtFirstName.Text + "','" + txtLastName.Text + "','" + BirthDate.Text + "','" + gender + "','" + txtFatherName.Text + "','" + txtAddress.Text + "','" + txtMobileNo.Text + "','" + txtAadharno.Text + "')", con);
         //    cmd.ExecuteNonQuery();
+        //    SqlCommand cmd1 = new SqlCommand("SELECT SCOPE_IDENTITY()", con);
+        //    SqlDataReader dr = cmd1.ExecuteReader();
         //    con.Close();
         //    MessageBox.Show("one record inserted");
         //}
@@ -51,8 +53,7 @@ namespace SchoolMgtSystem
         //private void InsertAdmisssionData()
         //{
         //    con.Open();
-        //    SqlCommand cmd1 = new SqlCommand("SELECT SCOPE_IDENTITY()", con);
-        //    SqlDataReader dr = cmd1.ExecuteReader();
+       
         //    DataTable datatable = new DataTable();
         //    datatable.Load(dr);
         //    int studentid;
