@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using DAL;
 
 namespace SchoolMgtSystem
 {
@@ -50,11 +51,12 @@ namespace SchoolMgtSystem
         }
         private void StudentApplicationForm_Load(object sender, EventArgs e)
         {
-            DataTable dt1 = GetGradesData();
-            DisplayComboboxdata(dt1);
+            GradeDAL grad1 = new GradeDAL();
+            DataTable dt1 =  grad1.GetGradesData();
+            BindComboboxdata(dt1);//
         }
 
-        private void DisplayComboboxdata(DataTable dt1)
+        private void BindComboboxdata(DataTable dt1)
         {
             DataRow dataRow = dt1.NewRow();
             dataRow["ID"] = 0;
@@ -71,16 +73,16 @@ namespace SchoolMgtSystem
             con.Close();
         }
 
-        private DataTable GetGradesData()
-        {
-            con.Open();
-            SqlCommand cmd1 = new SqlCommand("select  ID,CODE from GRADES_TABLE", con);
-            SqlDataReader dr = cmd1.ExecuteReader();
-            DataTable dt1 = new DataTable();
-            dt1.Load(dr);
-            con.Close();
-            return dt1;
-        }
+        //private DataTable GetGradesData()
+        //{
+        //    con.Open();
+        //    SqlCommand cmd1 = new SqlCommand("select  ID,CODE from GRADES_TABLE", con);
+        //    SqlDataReader dr = cmd1.ExecuteReader();
+        //    DataTable dt1 = new DataTable();
+        //    dt1.Load(dr);
+        //    con.Close();
+        //    return dt1;
+        //}
 
     }
 
