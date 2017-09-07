@@ -35,10 +35,11 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(97, 62);
+            this.dataGridView1.Location = new System.Drawing.Point(76, 64);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(463, 308);
+            this.dataGridView1.Size = new System.Drawing.Size(654, 308);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseDoubleClick);
             // 
             // Admissions
             // 
@@ -53,9 +54,7 @@
             this.ResumeLayout(false);
 
         }
-
         #endregion
-
         private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

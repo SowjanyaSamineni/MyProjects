@@ -16,7 +16,7 @@ namespace SchoolMgtSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            StudentApplicationForm myObj = new StudentApplicationForm();
+            HomePage myObj = new HomePage();
             Application.Run(myObj);
         }
     }

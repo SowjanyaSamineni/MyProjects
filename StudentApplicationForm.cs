@@ -12,13 +12,19 @@ using DAL;
 
 namespace SchoolMgtSystem
 {
-    public partial class StudentApplicationForm : Form
+    public partial class AdmissonForm: Form
     {
-        public StudentApplicationForm()
+        SqlConnection con = new SqlConnection("uid=sa;password=surya;database=SCHOOLAPPLICATION");
+        public int admissionid;
+        public AdmissonForm()
         {
             InitializeComponent();
         }
-        SqlConnection con = new SqlConnection("uid=sa;password=surya;database=SCHOOLAPPLICATION");
+        public AdmissonForm(int adminid)
+        {
+            admissionid=adminid;
+        }
+       
         private void btnsubmit_Click(object sender, EventArgs e)
         {
             int studentid = InsertStudentDetails();
@@ -53,7 +59,8 @@ namespace SchoolMgtSystem
         {
             GradeDAL grad1 = new GradeDAL();
             DataTable dt1 =  grad1.GetGradesData();
-            BindComboboxdata(dt1);//
+            BindComboboxdata(dt1);
+        
         }
 
         private void BindComboboxdata(DataTable dt1)

@@ -24,13 +24,20 @@ namespace SchoolMgtSystem
 
         private void nEWADMISSIONFORMToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StudentApplicationForm stapp = new StudentApplicationForm();
+            AdmissonForm stapp = new AdmissonForm();
             stapp.Show();
 
         }
 
         private void HomePage_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void sTUDENTLISTToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Admissions admissions = new Admissions();
+            admissions.Show();
 
         }
     }

@@ -85,7 +85,8 @@
             // 
             this.sTUDENTLISTToolStripMenuItem.Name = "sTUDENTLISTToolStripMenuItem";
             this.sTUDENTLISTToolStripMenuItem.Size = new System.Drawing.Size(202, 22);
-            this.sTUDENTLISTToolStripMenuItem.Text = "STUDENT LIST";
+            this.sTUDENTLISTToolStripMenuItem.Text = "ADMISSSION LIST";
+            this.sTUDENTLISTToolStripMenuItem.Click += new System.EventHandler(this.sTUDENTLISTToolStripMenuItem_Click);
             // 
             // tRANSFERSToolStripMenuItem
             // 

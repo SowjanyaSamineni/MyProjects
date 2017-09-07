@@ -1,6 +1,6 @@
 ﻿namespace SchoolMgtSystem
 {
-    partial class StudentApplicationForm
+    partial class AdmissonForm
     {
         /// <summary>
         /// Required designer variable.
