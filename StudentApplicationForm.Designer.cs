@@ -337,7 +337,7 @@
             this.txtAadharno.Size = new System.Drawing.Size(114, 20);
             this.txtAadharno.TabIndex = 42;
             // 
-            // StudentApplicationForm
+            // AdmissonForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -374,7 +374,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "StudentApplicationForm";
+            this.Name = "AdmissonForm";
             this.Text = "StudentApplicationForm";
             this.Load += new System.EventHandler(this.StudentApplicationForm_Load);
             this.ResumeLayout(false);

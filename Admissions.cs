@@ -12,12 +12,12 @@ namespace SchoolMgtSystem
 {
     public partial class Admissions : Form
     {
-         SqlConnection con = new SqlConnection("uid=sa;password=surya;database=SCHOOLAPPLICATION");
+        SqlConnection con = new SqlConnection("uid=sa;password=surya;database=SCHOOLAPPLICATION");
         public Admissions()
         {
             InitializeComponent();
         }
-       
+
         private void Admissions_Load(object sender, EventArgs e)
         {
             con.Open();
@@ -35,9 +35,15 @@ namespace SchoolMgtSystem
 
         private void dataGridView1_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            AdmissonForm admissionform = new AdmissonForm();
-            admissionform.admissionid = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            //  admissionform.admissionid = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            int admissionid = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            AdmissonForm admissionform = new AdmissonForm(admissionid);
             admissionform.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
