@@ -21,11 +21,15 @@ namespace SchoolMgtSystem
         private void Admissions_Load(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("select STUDENT_TABLE.ID,ADMISSION_TABLE.ID,ADMISSION_TABLE.Admission_GradeId,ADMISSION_TABLE.DateOfAdmission,STUDENT_TABLE.FirstName from STUDENT_TABLE inner join ADMISSION_TABLE on STUDENT_TABLE.ID=ADMISSION_TABLE.Student_Id", con);
+            SqlCommand cmd = new SqlCommand(@"select ADMISSION_TABLE.ID,ADMISSION_TABLE.Student_Id,ADMISSION_TABLE.TC_Number,ADMISSION_TABLE.Previous_Acadamicyear,STUDENT_TABLE.FirstName,STUDENT_TABLE.LastName,STUDENT_TABLE.DOB,
+            STUDENT_TABLE.Gender,STUDENT_TABLE.AadharNumber,ADMISSION_TABLE.Admission_GradeId,ADMISSION_TABLE.DateOfAdmission 
+            from STUDENT_TABLE inner join ADMISSION_TABLE on STUDENT_TABLE.ID=ADMISSION_TABLE.Student_Id", con);
+            // SqlCommand cmd = new SqlCommand("select STUDENT_TABLE.*,ADMISSION_TABLE.* from STUDENT_TABLE inner join ADMISSION_TABLE on STUDENT_TABLE.ID=ADMISSION_TABLE.Student_Id", con);
             SqlDataReader dr;
             dr = cmd.ExecuteReader();
             DataTable dataTable = new DataTable();
             dataTable.Load(dr);
+            dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = dataTable;
             con.Close();
             //int admissionid; 
@@ -35,9 +39,11 @@ namespace SchoolMgtSystem
 
         private void dataGridView1_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //  admissionform.admissionid = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            // admissionform.admissionid = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            //DataTable dt=new DataTable;
+            //dt=dataGridView1.DataSource;
             int admissionid = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
-            AdmissonForm admissionform = new AdmissonForm(admissionid);
+            AdmissionForm admissionform = new AdmissionForm(admissionid);
             admissionform.Show();
         }
 
@@ -45,5 +51,7 @@ namespace SchoolMgtSystem
         {
 
         }
+
+
     }
 }

@@ -76,11 +76,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentApplicationForm.cs">
+    <Compile Include="AdmissionForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StudentApplicationForm.Designer.cs">
-      <DependentUpon>StudentApplicationForm.cs</DependentUpon>
+    <Compile Include="AdmissionForm.Designer.cs">
+      <DependentUpon>AdmissionForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Admissions.resx">
       <DependentUpon>Admissions.cs</DependentUpon>
@@ -106,8 +106,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="StudentApplicationForm.resx">
-      <DependentUpon>StudentApplicationForm.cs</DependentUpon>
+    <EmbeddedResource Include="AdmissionForm.resx">
+      <DependentUpon>AdmissionForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

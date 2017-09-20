@@ -72,7 +72,6 @@
             this.fORMSToolStripMenuItem.Name = "fORMSToolStripMenuItem";
             this.fORMSToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.fORMSToolStripMenuItem.Text = "FORMS";
-            this.fORMSToolStripMenuItem.Click += new System.EventHandler(this.fORMSToolStripMenuItem_Click);
             // 
             // nEWADMISSIONFORMToolStripMenuItem
             // 

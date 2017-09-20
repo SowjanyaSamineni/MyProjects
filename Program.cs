@@ -20,4 +20,5 @@ namespace SchoolMgtSystem
             Application.Run(myObj);
         }
     }
-}
+
+    }

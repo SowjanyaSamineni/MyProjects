@@ -17,20 +17,10 @@ namespace SchoolMgtSystem
             InitializeComponent();
         }
 
-        private void fORMSToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void nEWADMISSIONFORMToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AdmissonForm stapp = new AdmissonForm();
+            AdmissionForm stapp = new AdmissionForm();
             stapp.Show();
-
-        }
-
-        private void HomePage_Load(object sender, EventArgs e)
-        {
 
         }
 
@@ -38,6 +28,11 @@ namespace SchoolMgtSystem
         {
             Admissions admissions = new Admissions();
             admissions.Show();
+
+        }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
 
         }
     }
