@@ -32,9 +32,6 @@ namespace SchoolMgtSystem
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.DataSource = dataTable;
             con.Close();
-            //int admissionid; 
-            //admissionid = Convert.ToInt32(dataTable.Rows[0][0]);
-            //return admissionid;
         }
 
         private void dataGridView1_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)

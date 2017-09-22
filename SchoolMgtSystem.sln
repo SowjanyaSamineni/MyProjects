@@ -5,13 +5,13 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolMgtSystem", "SchoolMgtSystem.csproj", "{015A181F-9594-44B6-B4C7-F53E6FA95989}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL.csproj", "{C7D5EB19-5497-45D7-B077-88699EA6C8E8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolDAL", "..\DAL\SchoolDAL.csproj", "{C7D5EB19-5497-45D7-B077-88699EA6C8E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentBAL", "..\StudentBL\StudentBAL.csproj", "{60F4371C-1A05-4559-B472-9158B03AF0B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolBAL", "..\StudentBL\SchoolBAL.csproj", "{60F4371C-1A05-4559-B472-9158B03AF0B9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolAppDomain", "..\SchoolAppDomain\SchoolAppDomain.csproj", "{69B5FFD1-85C4-4A13-A49D-07BF654E9938}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdmissionFormDetails", "..\AdmissionFormDetails\AdmissionFormDetails.csproj", "{55AAF86A-6F41-4F30-BAFB-78211D8AB731}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolPresentationUI", "..\AdmissionFormDetails\SchoolPresentationUI.csproj", "{55AAF86A-6F41-4F30-BAFB-78211D8AB731}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
