@@ -123,9 +123,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DAL\SchoolDAL.csproj">
-      <Project>{c7d5eb19-5497-45d7-b077-88699ea6c8e8}</Project>
-      <Name>SchoolDAL</Name>
+    <ProjectReference Include="..\SchoolAppDomain\SchoolAppDomain.csproj">
+      <Project>{69b5ffd1-85c4-4a13-a49d-07bf654e9938}</Project>
+      <Name>SchoolAppDomain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentBL\SchoolBAL.csproj">
+      <Project>{60f4371c-1a05-4559-b472-9158b03af0b9}</Project>
+      <Name>SchoolBAL</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

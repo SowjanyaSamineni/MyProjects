@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolBAL", "..\StudentBL\S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolAppDomain", "..\SchoolAppDomain\SchoolAppDomain.csproj", "{69B5FFD1-85C4-4A13-A49D-07BF654E9938}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolPresentationUI", "..\AdmissionFormDetails\SchoolPresentationUI.csproj", "{55AAF86A-6F41-4F30-BAFB-78211D8AB731}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{69B5FFD1-85C4-4A13-A49D-07BF654E9938}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69B5FFD1-85C4-4A13-A49D-07BF654E9938}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69B5FFD1-85C4-4A13-A49D-07BF654E9938}.Release|Any CPU.Build.0 = Release|Any CPU
-		{55AAF86A-6F41-4F30-BAFB-78211D8AB731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55AAF86A-6F41-4F30-BAFB-78211D8AB731}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55AAF86A-6F41-4F30-BAFB-78211D8AB731}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55AAF86A-6F41-4F30-BAFB-78211D8AB731}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
